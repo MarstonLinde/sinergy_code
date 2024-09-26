@@ -1,0 +1,35 @@
+
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
+@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name="Controle Básico de Movimento")
+
+public class Main extends LinearOpMode {
+    DcMotor frontleftMotor;
+    DcMotor frontrightMotor;
+    DcMotor backleftMotor;
+    DcMotor backrightMotor;
+
+@Override
+    public void runOpMode() {
+      frontleftMotor = hardwareMap.get("x");
+      frontrightMotor = hardwareMap.get("x");
+      backrightMotor = hardwareMap.get("x");
+      backleftMotor = hardwareMap.get("x");
+
+
+        waitForStart();
+        while(opModeIsActive()){
+           backleftMotor.setPower(1);
+           frontleftMotor.setPower(1);
+           backrightMotor.setPower(-1);
+           backrightMotor.setPower(-1);
+        
+           
+
+        }
+    }
+}    
