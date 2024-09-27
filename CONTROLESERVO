@@ -1,0 +1,45 @@
+//CODIGO APRENDIZADO SERVO DE JOAO
+
+
+import com.qualcomm.robotcore.eventloop.opmode.Opmode;
+import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+
+
+@Autonomous(name="")
+@com.qualcomm.robotcore.eventloop.opmode.TeleOp
+public class ServoControlExample extends LinearOpMode {
+
+    
+    private Servo Servoright;
+    private Servo Servoleft; //ABRIR VARIAVEL
+
+    @Override
+    public void runOpMode() throws InterruptedException {
+    
+        servoright = hardwareMap.get("servoRight");
+        servoleft = hardwareMap.servo.get("servoLeft");  //MAPEAR
+        
+        
+        waitForStart();
+
+        
+        while (opModeIsActive()) {
+
+            //MOVIMENTO SERVO ROBO 
+           
+            servo1.setPosition(1.0); 
+            servo2.setPosition(1.0);
+            sleep(3000); 
+
+        
+            servo1.setPosition(0.0);
+            servo2.setPosition(0.0);
+          
+
+            break; //PARAR LOOP DO WHILE DO ROBO 
+        }
+    }
+}
+ 
